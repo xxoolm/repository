@@ -1,6 +1,6 @@
 # Home Assistant Community Add-on: Node-RED
 
-Node-RED is a programming tool for wiring together hardware devices,
+[Node-RED][nodered] is a programming tool for wiring together hardware devices,
 APIs and online services in new and interesting ways.
 
 It provides a browser-based editor that makes it easy to wire together flows
@@ -12,10 +12,12 @@ runtime in a single click.
 The installation of this add-on is pretty straightforward and not different in
 comparison to installing any other Home Assistant add-on.
 
-1. Search for the "Node-RED" add-on in the Home Assistant add-on store and
-   install it.
-1. Set a `credential_secret`, which is used to encrypt sensitive data.
-   This is just a "password", which you should save in a secondary location.
+1. Click the Home Assistant My button below to open the add-on on your Home
+   Assistant instance.
+
+   [![Open this add-on in your Home Assistant instance.][addon-badge]][addon]
+
+1. Click the "Install" button to install the add-on.
 1. Start the "Node-RED" add-on.
 1. Check the logs of "Node-RED" to see if everything went well.
 1. Click on the "OPEN WEB UI" button to jump into Node-RED.
@@ -23,8 +25,6 @@ comparison to installing any other Home Assistant add-on.
 
 **Note**: The add-on is **pre-configured** out of the box! There is no need
 to add/change/update the server connection settings!
-
-Please read the rest of this document further instructions.
 
 ## Configuration
 
@@ -34,7 +34,6 @@ Example add-on configuration:
 
 ```yaml
 log_level: info
-credential_secret: KJHhfdhiFRENCKfsdfdsDHFHDJS
 http_node:
   username: MarryPoppins
   password: Supercalifragilisticexpialidocious
@@ -112,11 +111,30 @@ option will, eventhough required, be ignored by Node-RED._
 Sets one of the Node-RED themes. Currently available options:
 
 - `default`
+- `aurora`
+- `cobalt2`
 - `dark`
+- `dracula`
+- `espresso-libre`
+- `github-dark`
+- `github-dark-default`
+- `github-dark-dimmed`
 - `midnight-red`
+- `monoindustrial`
+- `monokai`
+- `monokai-dimmed`
+- `noctis`
+- `oceanic-next`
 - `oled`
+- `one-dark-pro`
+- `one-dark-pro-darker`
 - `solarized-dark`
 - `solarized-light`
+- `tokyo-night`
+- `tokyo-night-light`
+- `tokyo-night-storm`
+- `totallyinformation`
+- `zenburn`
 
 ### Option: `http_node`
 
@@ -162,6 +180,11 @@ Customize your Node-RED environment even more with the `init_commands` option.
 Add one or more shell commands to the list, and they will be executed every
 single time this add-on starts.
 
+### Option: `safe_mode`
+
+Setting this option to `true` will start Node-Red with the `--safe` flag set,
+starting the application without starting any flows for troubleshooting.
+
 ### Option: `leave_front_door_open`
 
 Adding this option to the add-on configuration allows you to disable
@@ -171,17 +194,24 @@ username and password empty.
 **Note**: _We STRONGLY suggest, not to use this, even if this add-on is
 only exposed to your internal network. USE AT YOUR OWN RISK!_
 
+### Option: `max_old_space_size`
+
+Sets the max memory size (in MB) of nodeJS V8's old memory section.
+As memory consumption approaches the limit, V8 will spend more time
+on garbage collection in an effort to free unused memory.
+
+<https://nodejs.org/api/cli.html#--max-old-space-sizesize-in-megabytes>
+
 ## Configuration folder
 
-The addon will store most of its configuration in the `config/node-red` folder,
-including the `flows.json`. Please ensure this is included in your backup. It is
-also important to note that this will not be removed on uninstalling the addon.
+The addon will store most of its configuration in the Node-RED add-on
+configuration folder, including the `flows.json`.
 
 ## Time zone configuration
 
 The addon will use the configured time zone of the underlying operating system.
 If this is incorrect (for example with the Home Assistant Operating System it
-will be UTC), this can be configured in the `/config/node-red/settings.js` file.
+will be UTC), this can be configured in the `settings.js` file.
 
 To do so, open the file with a text editor and add the following above the
 `module.exports = {` line.
@@ -239,6 +269,7 @@ You have several options to get them answered:
   Assistant discussions and questions.
 - The Home Assistant [Community Forum][forum].
 - Join the [Reddit subreddit][reddit] in [/r/homeassistant][reddit]
+- The [Node-RED documentation][nodered-docs]
 
 You could also [open an issue here][issue] GitHub.
 
@@ -253,7 +284,7 @@ check [the contributor's page][contributors].
 
 MIT License
 
-Copyright (c) 2018-2021 Franck Nijhof
+Copyright (c) 2018-2024 Franck Nijhof
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -273,6 +304,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+[addon-badge]: https://my.home-assistant.io/badges/supervisor_addon.svg
+[addon]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=a0d7b954_nodered&repository_url=https%3A%2F%2Fgithub.com%2Fhassio-addons%2Frepository
 [alpine-packages]: https://pkgs.alpinelinux.org/packages
 [contributors]: https://github.com/hassio-addons/addon-node-red/graphs/contributors
 [discord-ha]: https://discord.gg/c5DvZ4e
@@ -281,7 +314,9 @@ SOFTWARE.
 [frenck]: https://github.com/frenck
 [issue]: https://github.com/hassio-addons/addon-node-red/issues
 [node-red-nodes]: https://flows.nodered.org/?type=node&num_pages=1
+[nodered-docs]: https://nodered.org/docs
+[nodered]: https://nodered.org
 [npm-packages]: https://www.npmjs.com
 [reddit]: https://reddit.com/r/homeassistant
 [releases]: https://github.com/hassio-addons/addon-node-red/releases
-[semver]: http://semver.org/spec/v2.0.0.htm
+[semver]: https://semver.org/spec/v2.0.0.html

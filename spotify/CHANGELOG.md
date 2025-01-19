@@ -1,17 +1,16 @@
 ## What’s changed
 
+## 🚨 Breaking changes
+
+- Drop support for i386 @frenck ([#249](https://github.com/hassio-addons/addon-spotify-connect/pull/249))
+
 ## 🧰 Maintenance
 
-- 🚀 Add-on CI improvements @frenck (#130)
-
-## 📚 Documentation
-
-- 🚑 Fix contributing link in readme @frenck (#133)
+- Move coc and contributing to .github folder @frenck ([#247](https://github.com/hassio-addons/addon-spotify-connect/pull/247))
+- 🎆 Updates maintenance/license year to 2024 @frenck ([#255](https://github.com/hassio-addons/addon-spotify-connect/pull/255))
 
 ## ⬆️ Dependency updates
 
-- ⬆️ Bump actions/stale from 3.0.19 to 4 @dependabot (#128)
-- ⬆️ Bump frenck/action-addon-linter from 2.1 to 2.2 @dependabot (#127)
-- ⬆️ Upgrades cargo to 1.52.1-r1 @frenck (#131)
-- ⬆️ Bump dessant/lock-threads from 2.1.1 to 2.1.2 @dependabot (#132)
-- ⬆️ Upgrades add-on base image to v10.0.1 @frenck (#134)
+- ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v14.3.1 @renovate ([#248](https://github.com/hassio-addons/addon-spotify-connect/pull/248))
+- ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v14.3.2 @renovate ([#250](https://github.com/hassio-addons/addon-spotify-connect/pull/250))
+- ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v14.3.3 @renovate ([#252](https://github.com/hassio-addons/addon-spotify-connect/pull/252))

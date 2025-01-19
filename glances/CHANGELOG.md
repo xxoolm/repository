@@ -1,29 +1,14 @@
 ## What’s changed
 
-## 🚀 Enhancements
-
-- 🔥 Less logging by removing access log from log ouput @frenck (#185)
-- 🔑 Update NGINX SSL parameters @frenck (#186)
-- 🏎 Enable streaming mode for Ingress @frenck (#187)
-
-## 🧰 Maintenance
-
-- 🚀 Add-on CI improvements @frenck (#183)
-
-## 📚 Documentation
-
-- 🚑 Fix contributing link in readme @frenck (#184)
-
 ## ⬆️ Dependency updates
 
-- ⬆️ Bump requests from 2.25.1 to 2.26.0 @dependabot (#174)
-- ⬆️ Bump actions/stale from 3.0.19 to 4 @dependabot (#176)
-- ⬆️ Bump frenck/action-addon-linter from 2.1 to 2.2 @dependabot (#175)
-- ⬆️ Bump zeroconf from 0.32.1 to 0.33.0 @dependabot (#177)
-- ⬆️ Bump zeroconf from 0.33.0 to 0.33.1 @dependabot (#178)
-- ⬆️ Bump glances from 3.2.1 to 3.2.2 in /glances @dependabot (#179)
-- ⬆️ Bump zeroconf from 0.33.1 to 0.33.2 in /glances @dependabot (#180)
-- ⬆️ Bump zeroconf from 0.33.2 to 0.34.3 in /glances @dependabot (#182)
-- ⬆️ Bump zeroconf from 0.34.3 to 0.35.1 in /glances @dependabot (#189)
-- ⬆️ Bump glances from 3.2.2 to 3.2.3 in /glances @dependabot (#188)
-- ⬆️ Bump zeroconf from 0.35.1 to 0.36.0 in /glances @dependabot (#190)
+- ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v15.0.4 @renovate ([#451](https://github.com/hassio-addons/addon-glances/pull/451))
+- ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v15.0.5 @renovate ([#452](https://github.com/hassio-addons/addon-glances/pull/452))
+- ⬆️ Update psutil to v5.9.8 @renovate ([#453](https://github.com/hassio-addons/addon-glances/pull/453))
+- ⬆️ Update influxdb-client to v1.40.0 @renovate ([#454](https://github.com/hassio-addons/addon-glances/pull/454))
+- ⬆️ Update alpine_3_19/nginx to v1.24.0-r15 @renovate ([#455](https://github.com/hassio-addons/addon-glances/pull/455))
+- ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v15.0.6 @renovate ([#456](https://github.com/hassio-addons/addon-glances/pull/456))
+- ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v15.0.7 @renovate ([#458](https://github.com/hassio-addons/addon-glances/pull/458))
+- ⬆️ Update Python to v3.11.8-r0 @renovate ([#461](https://github.com/hassio-addons/addon-glances/pull/461))
+- ⬆️ Update influxdb-client to v1.41.0 @renovate ([#462](https://github.com/hassio-addons/addon-glances/pull/462))
+- ⬆️ Update glances to v3.4.0.5 @renovate ([#464](https://github.com/hassio-addons/addon-glances/pull/464))

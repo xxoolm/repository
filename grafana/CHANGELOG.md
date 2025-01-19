@@ -2,6 +2,4 @@
 
 ## ⬆️ Dependency updates
 
-- ⬆️ Bump dessant/lock-threads from 2.1.1 to 2.1.2 @dependabot (#196)
-- ⬆️ Upgrades add-on base image to v5.0.0 @frenck (#197)
-- ⬆️ Upgrades Grafana to v8.1.2 @frenck (#198)
+- ⬆️ Update grafana/grafana to v11.3.1 @renovate ([#433](https://github.com/hassio-addons/addon-grafana/pull/433))

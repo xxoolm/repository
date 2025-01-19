@@ -8,14 +8,19 @@ It detects Chromecast players in your network and creates virtual AirPlay
 devices for each of them. It acts as a bridge between the AirPlay client
 and the real Chromecast player.
 
+The AirCast add-on is based on the excellent [AirConnect][airconnect] project.
+
 ## Installation
 
 The installation of this add-on is pretty straightforward and not different in
 comparison to installing any other Home Assistant add-on.
 
-1. Search for the “AirCast” add-on in the Supervisor add-on store
-   and install it.
-1. Install the "AirCast" add-on.
+1. Click the Home Assistant My button below to open the add-on on your Home
+   Assistant instance.
+
+   [![Open this add-on in your Home Assistant instance.][addon-badge]][addon]
+
+1. Click the "Install" button to install the add-on.
 1. Start the "AirCast" add-on
 1. Check the logs of the "AirCast" add-on to see if everything went well.
 
@@ -146,8 +151,8 @@ lack of audio. Note that `latency_rtp` does not delay playback start.
 
 ## Tweaking Aircast
 
-Aircast creates a configuration file called `aircast.xml` in your Home
-Assistant configuration directory. This file allows you to tweak each device
+Aircast creates a configuration file called `aircast.xml` in the add-on
+configuration directory. This file allows you to tweak each device
 separately. Every time it finds a new device, it will be added to that file.
 
 > **NOTE**: It is HIGHLY recommended to stop the addon before making changes
@@ -199,7 +204,7 @@ check [the contributor's page][contributors].
 
 MIT License
 
-Copyright (c) 2017-2021 Franck Nijhof
+Copyright (c) 2017-2024 Franck Nijhof
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -219,6 +224,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+[addon-badge]: https://my.home-assistant.io/badges/supervisor_addon.svg
+[addon]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=a0d7b954_airconnect&repository_url=https%3A%2F%2Fgithub.com%2Fhassio-addons%2Frepository
+[airconnect]: https://github.com/philippe44/AirConnect
 [contributors]: https://github.com/hassio-addons/addon-aircast/graphs/contributors
 [discord-ha]: https://discord.gg/c5DvZ4e
 [discord]: https://discord.me/hassioaddons

@@ -22,13 +22,23 @@ Some cool features of motionEye:
 The installation of this add-on is pretty straightforward and not different in
 comparison to installing any other Home Assistant add-on.
 
-1. Search for the "motionEye" add-on in the Supervisor add-on store and
-   install it.
+1. Click the Home Assistant My button below to open the add-on on your Home
+   Assistant instance.
+
+   [![Open this add-on in your Home Assistant instance.][addon-badge]][addon]
+
+1. Click the "Install" button to install the add-on.
 1. Start the "motionEye" add-on
 1. Check the logs of the "motionEye" add-on to see if everything went well.
 1. Click the "OPEN WEB UI" button to open the web interface
 1. Login with username "admin", without a password.
 1. Edit your admin account with a secure password!
+
+Home Assistant, by default, ships with the Community Add-ons store installed.
+However, if it is missing (for any reason), you can add it by clicking the
+button My button below.
+
+[![Add repository to your Home Assitant instance.][repository-badge]][repository]
 
 ## Configuration
 
@@ -163,7 +173,7 @@ check [the contributor's page][contributors].
 
 MIT License
 
-Copyright (c) 2018-2021 Franck Nijhof
+Copyright (c) 2018-2024 Franck Nijhof
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -183,6 +193,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+[addon-badge]: https://my.home-assistant.io/badges/supervisor_addon.svg
+[addon]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=a0d7b954_motioneye
 [contributors]: https://github.com/hassio-addons/addon-motioneye/graphs/contributors
 [discord-ha]: https://discord.gg/c5DvZ4e
 [discord]: https://discord.me/hassioaddons
@@ -190,7 +202,9 @@ SOFTWARE.
 [forum]: https://community.home-assistant.io/t/home-assistant-community-add-on-motioneye/71826?u=frenck
 [frenck]: https://github.com/frenck
 [issue]: https://github.com/hassio-addons/addon-motioneye/issues
-[motioneye-wiki-action-buttons]: https://github.com/ccrisan/motioneye/wiki/Action-Buttons
+[motioneye-wiki-action-buttons]: https://github.com/motioneye-project/motioneye/wiki/Action-Buttons
 [reddit]: https://reddit.com/r/homeassistant
 [releases]: https://github.com/hassio-addons/addon-motioneye/releases
-[semver]: http://semver.org/spec/v2.0.0.htm
+[repository-badge]: https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg
+[repository]: https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fhassio-addons%2Frepository
+[semver]: https://semver.org/spec/v2.0.0.html

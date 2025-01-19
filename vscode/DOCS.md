@@ -1,11 +1,9 @@
-# Home Assistant Community Add-on: Visual Studio Code
+# Home Assistant Community Add-on: Studio Code Server
 
-This add-on runs Visual Studio Code, allowing you to edit your Home Assistant
-configuration directly from your web browser and can be embedded straight
-into the Home Assistant frontend UI.
-
-Visual Studio Code runs as a remote server using `code-server`, and is a
-fully fledged VSCode experience.
+This add-on runs [code-server](https://github.com/coder/code-server), which
+gives you a Visual Studio Code experience straight from the browser. It allows
+you to edit your Home Assistant configuration directly from your web browser,
+directly from within the Home Assistant frontend.
 
 The add-on has the Home Assistant, MDI icons and YAML extensions pre-installed
 and pre-configured right out of the box. This means that auto-completion works
@@ -16,12 +14,16 @@ instantly, without the need for configuring anything.
 The installation of this add-on is pretty straightforward and not different in
 comparison to installing any other Home Assistant add-on.
 
-1. Search for the "Visual Studio Code" add-on in the Supervisor add-on store
-   and install it.
-1. Start the "Visual Studio Code" add-on.
-1. Check the logs of the "Visual Studio Code" add-on to see if everything went
+1. Click the Home Assistant My button below to open the add-on on your Home
+   Assistant instance.
+
+   [![Open this add-on in your Home Assistant instance.][addon-badge]][addon]
+
+1. Click the "Install" button to install the add-on.
+1. Start the "Studio Code Server" add-on.
+1. Check the logs of the "Studio Code Server" add-on to see if everything went
    well.
-1. Click the "OPEN WEB UI" button to open Visual Studio Code.
+1. Click the "OPEN WEB UI" button to open Studio Code Server.
 
 ## Configuration
 
@@ -90,40 +92,9 @@ might be destructive. However, in case you changed some things, but want to
 return to the defaults as delivered by this add-on, do the following:
 
 1. Open the Visual Studio Code editor.
-1. Click on `Terminal` in the top menu bar and clik on `New Terminal`.
+1. Click on `Terminal` in the top menu bar and click on `New Terminal`.
 1. Execute the following command in the terminal window: `reset-settings`.
 1. Done!
-
-## Using with ESPHome
-
-The add-on has support for ESPHome (and its vscode extension), built-in!
-It has been installed and pre-configured for you, however, it might need
-an adjustment to your ESPHome add-on in order to function.
-
-1. Go to the ESPHome add-on configuration in your Supervisor panel.
-1. Add the `leave_front_door_open` option, since the vscode extension of
-   ESPHome does not support authentication yet. The ESPHome add-on
-   configuration would look like this:
-
-   ```yaml
-   leave_front_door_open: true
-   ```
-
-1. Save the add-on configuration.
-1. Enable direct access to the ESPHome add-on, by enabling the network port.
-   This option can be found on the ESPHome add-on settings page, in the
-   "Network" section. In the "Host" field (that is now showing disabled),
-   enter `6052` and hit save.
-1. Restart the ESPHome add-on.
-
-And you're set!
-
-No changes to the vscode add-on are needed, since it has been pre-configured.
-
-**Please note!** This opens up ESPHome for access within your network
-without authentication! Currently, this is how ESPHome advises how to
-set up your system, but it surely has security risks. We hope ESPHome
-will come up with a better solution for this soon.
 
 ## Known issues and limitations
 
@@ -133,11 +104,6 @@ will come up with a better solution for this soon.
   Although we support ARM devices, please be aware, that this add-on is quite
   heavy to run, and requires quite a bit of RAM. We do not recommended to run
   it on devices with less than 4Gb of memory.
-- If you get a blank screen (and it worked before), it could be that you changed
-  your workspace. Reinstalling the add-on will not help since it keeps the data
-  in your browser. To remove it (in Chrome) open up developer tools (F12),
-  then go to the application tab and click "clear storage".
-  Now refresh the page and you're back in action.
 - "Visual Studio Code is unable to watch for file changes in this large
   workspace" (error ENOSPC)
 
@@ -188,7 +154,7 @@ check [the contributor's page][contributors].
 
 MIT License
 
-Copyright (c) 2019-2021 Franck Nijhof
+Copyright (c) 2019-2024 Franck Nijhof
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -208,6 +174,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+[addon-badge]: https://my.home-assistant.io/badges/supervisor_addon.svg
+[addon]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=a0d7b954_vscode&repository_url=https%3A%2F%2Fgithub.com%2Fhassio-addons%2Frepository
 [contributors]: https://github.com/hassio-addons/addon-vscode/graphs/contributors
 [discord-ha]: https://discord.gg/c5DvZ4e
 [discord]: https://discord.me/hassioaddons
@@ -216,5 +184,5 @@ SOFTWARE.
 [issue]: https://github.com/hassio-addons/addon-vscode/issues
 [reddit]: https://reddit.com/r/homeassistant
 [releases]: https://github.com/hassio-addons/addon-vscode/releases
-[semver]: http://semver.org/spec/v2.0.0
+[semver]: https://semver.org/spec/v2.0.0
 [ubuntu-packages]: https://packages.ubuntu.com

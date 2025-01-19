@@ -1,25 +1,19 @@
 ## What’s changed
 
-So, the first release had bugs and needed improvements 😬 
-But this release fixes a lot of them! Thanks for the feedback and reports 👍 
-
-Subnet & Exit node routing has been fixed, additionally, the add-on will now only expose subnets that can be routed on your system.
-
 ## 🐛 Bug fixes
 
-- 🚑 Use netfilter for iptables @frenck (#17)
+- Fix base image update @lmagyar ([#435](https://github.com/hassio-addons/addon-tailscale/pull/435))
 
 ## 🚀 Enhancements
 
-- 💄 Update sidebar icon from Docker -> VPN @frenck (#11)
-- 👕 Skip local link addresses in routes advertisement @frenck (#18)
-- 👕 Skip address family from route advertisement if it has forwarding disabled @frenck (#19)
+- Fix harmless typos @lmagyar ([#429](https://github.com/hassio-addons/addon-tailscale/pull/429))
 
 ## 📚 Documentation
 
-- 📚 Adjust i386 badge, as that is a supported architecture @frenck (#7)
+- Update docs with DNS settings @lmagyar ([#428](https://github.com/hassio-addons/addon-tailscale/pull/428))
 
 ## ⬆️ Dependency updates
 
-- Bump docker/build-push-action from 2.6.1 to 2.7.0 @dependabot (#15)
-- ⬆️ Upgrades Tailscale to 1.14.0 @frenck (#16)
+- ⬆️ Update tailscale/tailscale to v1.78.0 @renovate ([#432](https://github.com/hassio-addons/addon-tailscale/pull/432))
+- ⬆️ Update tailscale/tailscale to v1.78.1 @renovate ([#433](https://github.com/hassio-addons/addon-tailscale/pull/433))
+- ⬆️ Update Add-on base image to v17 (major) @renovate ([#434](https://github.com/hassio-addons/addon-tailscale/pull/434))

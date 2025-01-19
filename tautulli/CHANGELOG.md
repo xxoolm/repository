@@ -1,25 +1,17 @@
 ## What’s changed
 
-## 🐛 Bug fixes
-
-- Fix wheels link @frenck (#143)
-- Bump wheels link again @frenck (#153)
-
-## 🚀 Enhancements
-
-- Change add-on startup to application level @frenck (#152)
-
 ## ⬆️ Dependency updates
 
-- ⬆️ Bump docker/setup-qemu-action from 1.1.0 to 1.2.0 @dependabot (#137)
-- ⬆️ Bump docker/build-push-action from 2.4.0 to 2.5.0 @dependabot (#136)
-- ⬆️ Bump actions/cache from 2.1.5 to 2.1.6 @dependabot (#138)
-- ⬆️ Bump frenck/action-addon-information from 1.1 to 1.2.2 @dependabot (#140)
-- ⬆️ Bump plexapi from 4.5.2 to 4.6.0 @dependabot (#141)
-- ⬆️ Upgrades add-on base image to v9.2.2 @frenck (#142)
-- ⬆️ Bump plexapi from 4.6.0 to 4.6.1 in /tautulli @dependabot (#144)
-- ⬆️ Bump docker/build-push-action from 2.5.0 to 2.6.1 @dependabot (#148)
-- ⬆️ Bump docker/setup-buildx-action from 1.3.0 to 1.4.1 @dependabot (#147)
-- ⬆️ Bump docker/login-action from 1.9.0 to 1.10.0 @dependabot (#146)
-- ⬆️ Upgrades add-on base image to v10.0.0 @frenck (#150)
-- ⬆️ Upgrades Tautulli to v2.7.4 @frenck (#151)
+- ⬆️ Update pycryptodomex to v3.21.0 @renovate ([#372](https://github.com/hassio-addons/addon-tautulli/pull/372))
+- ⬆️ Update ghcr.io/hassio-addons/debian-base Docker tag to v7.5.1 @renovate ([#373](https://github.com/hassio-addons/addon-tautulli/pull/373))
+- ⬆️ Update setuptools to v75.2.0 @renovate ([#374](https://github.com/hassio-addons/addon-tautulli/pull/374))
+- ⬆️ Update setuptools to v75.3.0 @renovate ([#376](https://github.com/hassio-addons/addon-tautulli/pull/376))
+- ⬆️ Update ghcr.io/hassio-addons/debian-base Docker tag to v7.5.2 @renovate ([#377](https://github.com/hassio-addons/addon-tautulli/pull/377))
+- ⬆️ Update setuptools to v75.4.0 @renovate ([#378](https://github.com/hassio-addons/addon-tautulli/pull/378))
+- ⬆️ Update setuptools to v75.5.0 @renovate ([#379](https://github.com/hassio-addons/addon-tautulli/pull/379))
+- ⬆️ Update ghcr.io/hassio-addons/debian-base Docker tag to v7.6.0 @renovate ([#380](https://github.com/hassio-addons/addon-tautulli/pull/380))
+- ⬆️ Update plexapi to v4.16.0 @renovate ([#381](https://github.com/hassio-addons/addon-tautulli/pull/381))
+- ⬆️ Update setuptools to v75.6.0 @renovate ([#382](https://github.com/hassio-addons/addon-tautulli/pull/382))
+- ⬆️ Update ghcr.io/hassio-addons/debian-base Docker tag to v7.6.1 @renovate ([#383](https://github.com/hassio-addons/addon-tautulli/pull/383))
+- ⬆️ Update ghcr.io/hassio-addons/debian-base Docker tag to v7.6.2 @renovate ([#384](https://github.com/hassio-addons/addon-tautulli/pull/384))
+- ⬆️ Upgrades Tautulli to v2.15.0 @frenck ([#385](https://github.com/hassio-addons/addon-tautulli/pull/385))

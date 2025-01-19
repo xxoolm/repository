@@ -1,14 +1,13 @@
 ## What’s changed
 
-Primarily fixes an issue with the addon shutdown command being used, which would fail.
+## 📚 Documentation
 
-## 🐛 Bug fixes
-
-- 🔨 Update shutdown command @sinclairpaul (#160)
+- 📚 Clarify powervalue settings @sinclairpaul ([#388](https://github.com/hassio-addons/addon-nut/pull/388))
 
 ## ⬆️ Dependency updates
 
-- Bump dessant/lock-threads from 2.0.3 to 2.1.1 @dependabot (#154)
-- Bump docker/setup-buildx-action from 1.5.0 to 1.5.1 @dependabot (#155)
-- Bump frenck/action-addon-linter from 2.1 to 2.2 @dependabot (#157)
-- Bump actions/stale from 3.0.19 to 4 @dependabot (#158)
+- ⬆️ Update ghcr.io/hassio-addons/debian-base Docker tag to v7.5.1 @renovate ([#384](https://github.com/hassio-addons/addon-nut/pull/384))
+- ⬆️ Update ghcr.io/hassio-addons/debian-base Docker tag to v7.5.2 @renovate ([#390](https://github.com/hassio-addons/addon-nut/pull/390))
+- ⬆️ Update ghcr.io/hassio-addons/debian-base Docker tag to v7.6.0 @renovate ([#393](https://github.com/hassio-addons/addon-nut/pull/393))
+- ⬆️ Update ghcr.io/hassio-addons/debian-base Docker tag to v7.6.1 @renovate ([#394](https://github.com/hassio-addons/addon-nut/pull/394))
+- ⬆️ Update ghcr.io/hassio-addons/debian-base Docker tag to v7.6.2 @renovate ([#396](https://github.com/hassio-addons/addon-nut/pull/396))

@@ -1,29 +1,32 @@
+### 🚨 THIS RELEASE HAS MAJOR BREAKING CHANGES!
+### 🛑 DO NOT UPGRADE WITHOUT READING THE RELEASE NOTES!
+### ⚠️ BE SURE TO BACKUP BEFORE UPGRADING!
+
+**The v1.0.1 release is NOT backward-compatible with any existing installation prior v1.0.0.**
+
+Unfortunately, no stable/good migration path is possible; thus, on upgrade, you will **lose all your current NPM settings and configuration**. After the upgrade, you must set up your proxy configuration from scratch.
+
+**Please make sure you have the time to do this when you decide to upgrade.**
+
+After upgrading, you can log in with the default username & password: `admin@example.com` / `changeme`.
+
+Additionally, support for the `i386` and `armhf` OS/CPU architecture has been dropped (as has been dropped previously for all other Community Add-ons as well).
+
+[If you have any more questions, please check this issue.](https://github.com/hassio-addons/addon-nginx-proxy-manager/issues/507)
+
 ## What’s changed
 
-## ✨ New features
+- Based on the latest Nginx Proxy Manager [v2.10.4](https://github.com/NginxProxyManager/nginx-proxy-manager/releases/tag/v2.10.4), which closes [CVE-2023-27224](https://www.cvedetails.com/cve/CVE-2023-27224/).
+- Based on the latest Alpine Linux 3.19.
+- The add-on no longer uses the MariaDB add-on. This means after you have upgraded/migrated, you could uninstall the MariaDB add-on (if you solely used it for NPM).
+- Certbot now functions properly, which means all DNS challenges work as expected.
+- Backups of this add-on are now complete. They will contain all data, settings, and certificates; and can be restored easily/as normal.
+- All raw configuration data of NPM is now accessible via the `adddons_config` folder (for example, using Samba).
 
-- Add add-on translation support @frenck (#199)
+## What’s changed
 
-## 🧰 Maintenance
+## 🐛 Bug fixes
 
-- Apply updated repository structure & CI workflow @frenck (#198)
+- Fix syntax error in certbot patch @frenck ([#510](https://github.com/hassio-addons/addon-nginx-proxy-manager/pull/510))
 
-## ⬆️ Dependency updates
-
-- ⬆️ Upgrade add-on base image to 9.1.6 @frenck (#184)
-- ⬆️ Bump ludeeus/action-shellcheck from 1.0.0 to 1.1.0 @dependabot (#182)
-- ⬆️ Bump certbot-dns-cloudflare from 1.13.0 to 1.14.0 in /proxy-manager @dependabot (#185)
-- ⬆️ Bump docker/build-push-action from v2.3.0 to v2.4.0 @dependabot (#186)
-- ⬆️ Upgrades nodejs to 14.16.1-r0 @frenck (#189)
-- ⬆️ Bump docker/setup-qemu-action from v1.0.1 to v1.0.2 @dependabot (#188)
-- ⬆️ Bump docker/setup-buildx-action from v1.1.1 to v1.1.2 @dependabot (#187)
-- ⬆️ Upgrades add-on base image to v9.1.7 @frenck (#190)
-- ⬆️ Bump actions/cache from v2.1.4 to v2.1.5 @dependabot (#192)
-- ⬆️ Upgrades nodejs to 14.16.1-r1 @frenck (#194)
-- ⬆️ Bump brpaz/hadolint-action from v1.3.1 to v1.4.0 @dependabot (#196)
-- Upgrades add-on base image to v9.2.0 @frenck (#197)
-- ⬆️ Upgrades mariadb to 10.5.9-r0 @frenck (#200)
-- ⬆️ Bump docker/setup-qemu-action from v1.0.2 to v1.1.0 @dependabot (#202)
-- ⬆️ Bump docker/setup-buildx-action from v1.1.2 to v1.2.0 @dependabot (#203)
-- ⬆️ Bump docker/login-action from v1.8.0 to v1.9.0 @dependabot (#205)
-- ⬆️ Bump docker/setup-buildx-action from v1.2.0 to v1.3.0 @dependabot (#206)
+For all other changes in v1.0.0 see: <https://github.com/hassio-addons/addon-nginx-proxy-manager/releases/tag/v1.0.0>

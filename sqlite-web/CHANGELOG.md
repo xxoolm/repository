@@ -1,19 +1,11 @@
 ## What’s changed
 
-## 🧰 Maintenance
-
-- Apply updated repository structure & CI workflow @frenck (#138)
-
 ## ⬆️ Dependency updates
 
-- ⬆️ Bump actions/stale from v3.0.17 to v3.0.18 @dependabot (#127)
-- ⬆️ Upgrades python3 to 3.8.8-r0 @frenck (#129)
-- ⬆️ Bump release-drafter/release-drafter from v5.14.0 to v5.15.0 @dependabot (#128)
-- ⬆️ Bump ludeeus/action-shellcheck from 1.0.0 to 1.1.0 @dependabot (#130)
-- ⬆️ Bump docker/build-push-action from v2.3.0 to v2.4.0 @dependabot (#131)
-- ⬆️ Bump docker/setup-buildx-action from v1.1.1 to v1.1.2 @dependabot (#133)
-- ⬆️ Bump docker/setup-qemu-action from v1.0.1 to v1.0.2 @dependabot (#132)
-- ⬆️ Bump actions/cache from v2.1.4 to v2.1.5 @dependabot (#134)
-- ⬆️ Upgrades cython to 0.29.21-r1 @frenck (#135)
-- ⬆️ Bump brpaz/hadolint-action from v1.3.1 to v1.4.0 @dependabot (#136)
-- Upgrades add-on base image to v9.2.0 @frenck (#137)
+- ⬆️ Update alpine_3_20/python3 to v3.12.7-r0 @renovate ([#331](https://github.com/hassio-addons/addon-sqlite-web/pull/331))
+- ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v16.3.3 @renovate ([#332](https://github.com/hassio-addons/addon-sqlite-web/pull/332))
+- ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v16.3.4 @renovate ([#333](https://github.com/hassio-addons/addon-sqlite-web/pull/333))
+- ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v16.3.5 @renovate ([#334](https://github.com/hassio-addons/addon-sqlite-web/pull/334))
+- ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v16.3.6 @renovate ([#335](https://github.com/hassio-addons/addon-sqlite-web/pull/335))
+- ⬆️ Update alpine_3_20/python3 to v3.12.8-r0 @renovate ([#336](https://github.com/hassio-addons/addon-sqlite-web/pull/336))
+- ⬆️ Update ghcr.io/hassio-addons/base Docker tag to v17 @renovate ([#337](https://github.com/hassio-addons/addon-sqlite-web/pull/337))

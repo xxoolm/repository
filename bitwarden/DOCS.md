@@ -20,19 +20,24 @@ email, bank, and other important accounts. USE A PASSWORD MANAGER!
 The installation of this add-on is pretty straightforward and not different in
 comparison to installing any other Home Assistant add-on.
 
-1. Search for the "Vaultwarden (Bitwarden)" add-on in the Supervisor add-on
-   store and install it.
+1. Click the Home Assistant My button below to open the add-on on your Home
+   Assistant instance.
+
+   [![Open this add-on in your Home Assistant instance.][addon-badge]][addon]
+
+1. Click the "Install" button to install the add-on.
 1. Start the "Vaultwarden (Bitwarden)" add-on.
 1. Check the logs of the "Vaultwarden (Bitwarden)" add-on to see if everything
    went well and to get the admin token/password.
 1. Click the "OPEN WEB UI" button to open Vaultwarden.
 1. Add `/admin` to the URL to access the admin panel, e.g.,
    `http://hassio.local:7277/admin`. Log in using the admin token you got
-   in step 3.
+   in step 4.
 1. The admin/token in the logs is only shown until it is saved or changed.
    Hit save in the admin panel to use the randomly generated password or
    change it to one of your choosing.
-1. Be sure to store your admin token somewhere safe.
+1. Be sure to store your admin token somewhere safe. **The add-on will never
+   show it again!**
 
 ## Configuration
 
@@ -145,7 +150,7 @@ check [the contributor's page][contributors].
 
 MIT License
 
-Copyright (c) 2019-2021 Franck Nijhof
+Copyright (c) 2019-2024 Franck Nijhof
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -165,6 +170,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+[addon-badge]: https://my.home-assistant.io/badges/supervisor_addon.svg
+[addon]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=a0d7b954_bitwarden&repository_url=https%3A%2F%2Fgithub.com%2Fhassio-addons%2Frepository
 [contributors]: https://github.com/hassio-addons/addon-bitwarden/graphs/contributors
 [discord-ha]: https://discord.gg/c5DvZ4e
 [discord]: https://discord.me/hassioaddons
@@ -173,5 +180,5 @@ SOFTWARE.
 [issue]: https://github.com/hassio-addons/addon-bitwarden/issues
 [reddit]: https://reddit.com/r/homeassistant
 [releases]: https://github.com/hassio-addons/addon-bitwarden/releases
-[semver]: http://semver.org/spec/v2.0.0.htm
+[semver]: https://semver.org/spec/v2.0.0.html
 [vaultwarden]: https://github.com/dani-garcia/vaultwarden

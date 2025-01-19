@@ -1,4 +1,4 @@
-# Home Assistant Community Add-on: SSH & Web Terminal
+# Home Assistant Community Add-on: Advanced SSH & Web Terminal
 
 This add-on allows you to log in to your Home Assistant instance using
 SSH or a Web Terminal, giving you to access your folders and
@@ -6,13 +6,13 @@ also includes a command-line tool to do things like restart, update,
 and check your instance.
 
 This is an enhanced version of the provided
-[SSH add-on by Home Assistant][hass-ssh] and focusses on security,
+[SSH add-on by Home Assistant][hass-ssh] and focuses on security,
 usability, flexibility and also provides access using a web interface.
 
 ## WARNING
 
-The SSH & Web Terminal add-on is very powerful and gives you access to almost
-all tools and hardware of your system.
+The advanced SSH & Web Terminal add-on is very powerful and gives you access
+to almost all tools and hardware of your system.
 
 While this add-on is created and maintained with care and with security in mind,
 in the wrong or inexperienced hands, it could damage your system.
@@ -30,13 +30,14 @@ well. Additionally, it comes out of the box with the following:
   - Limits login attempts to hold off brute-force attacks better.
   - Many more security tweaks, _this addon passes all [ssh-audit] checks
     without warnings!_
-- Passwords are checked with HaveIBeenPwned using K-anonymity.
+    ![Result of SSH-Audit][ssh-audit-image]
 - Comes with an SSH compatibility mode option to allow older clients to connect.
 - Support for Mosh allowing roaming and supports intermittent connectivity.
 - SFTP support is disabled by default but is user configurable.
 - Compatible if Home Assistant was installed via the generic Linux installer.
 - Username is configurable, so `root` is no longer mandatory.
 - Persists custom SSH client settings & keys between add-on restarts
+- Log levels for allowing you to triage issues easier.
 - Hardware access to your audio, uart/serial devices and GPIO pins.
 - Runs with more privileges, allowing you to debug and test more situations.
 - Has access to the dbus of the host system.
@@ -49,26 +50,24 @@ well. Additionally, it comes out of the box with the following:
 - [ZSH][zsh] as its default shell. Easier to use for the beginner, more advanced
   for the more experienced user. It even comes preloaded with
   ["Oh My ZSH"][ohmyzsh], with some plugins enabled as well.
-- Bash: If ZSH is not your cup of tea, Bash can be enabled again, which
-  includes Bash completion for both the Core CLI and the Home Assistant CLI.
 - Contains a sensible set of tools right out of the box: curl, Wget, RSync, GIT,
   Nmap, Mosquitto client, MariaDB/MySQL client, Awake (“wake on LAN”), Nano,
   Vim, tmux, and a bunch commonly used networking tools.
-- Has the Home Assistant CLI (`hass-cli`) command line tool pre-installed and
-  pre-configured.
-- Support executing commands inside using a Home Assistant service call, e.g.,
-  for use with automations.
 
 ## Installation
 
 The installation of this add-on is pretty straightforward and not different in
 comparison to installing any other Home Assistant add-on.
 
-1. Search for the "SSH & Web Terminal" add-on in the Supervisor add-on store
-   and install it.
+1. Click the Home Assistant My button below to open the add-on on your Home
+   Assistant instance.
+
+   [![Open this add-on in your Home Assistant instance.][addon-badge]][addon]
+
+1. Click the "Install" button to install the add-on.
 1. Configure the `username` and `password`/`authorized_keys` options.
-1. Start the "SSH & Web Terminal" add-on.
-1. Check the logs of the "SSH & Web Terminal" add-on to see if everything
+1. Start the "Advanced SSH & Web Terminal" add-on.
+1. Check the logs of the "Advanced SSH & Web Terminal" add-on to see if everything
    went well.
 
 ## Configuration
@@ -83,7 +82,7 @@ ssh:
   username: homeassistant
   password: ""
   authorized_keys:
-    - ssh-rsa AASDJKJKJFWJFAFLCNALCMLAK234234.....
+    - ssh-ed25519 AASDJKJKJFWJFAFLCNALCMLAK234234.....
   sftp: false
   compatibility_mode: false
   allow_agent_forwarding: false
@@ -133,7 +132,8 @@ only apply to the SSH daemon.
 This option allows you to change to username the use when you log in via SSH.
 It is only utilized for the authentication; you will be the `root` user after
 you have authenticated. Using `root` as the username is possible, but not
-recommended.
+recommended. Usernames will be converted to lower case as per recommended
+practises.
 
 **Note**: _Due to limitations, you will need to set this option to `root` in
 order to be able to enable the SFTP capabilities._
@@ -143,9 +143,6 @@ order to be able to enable the SFTP capabilities._
 Sets the password to log in with. Leaving it empty would disable the possibility
 to authenticate with a password. We would highly recommend not to use this
 option from a security point of view.
-
-**Note**: _The password will be checked against HaveIBeenPwned. If it is
-listed, the add-on will not start._
 
 #### Option `ssh` `authorized_keys`
 
@@ -168,7 +165,7 @@ order to be able to enable the SFTP capabilities._
 
 #### Option `ssh`: `compatibility_mode`
 
-This SSH add-on focusses on security and has therefore only enabled known
+This SSH add-on focuses on security and has therefore only enabled known
 secure encryption methods. However, some older clients do not support these.
 Setting this option to `true` will enable the original default set of methods,
 allowing those clients to connect.
@@ -231,43 +228,8 @@ Customize your shell environment even more with the `init_commands` option.
 Add one or more shell commands to the list, and they will be executed every
 single time this add-on starts.
 
-#### Option: `i_like_to_be_pwned`
-
-Adding this option to the add-on configuration allows to you bypass the
-HaveIBeenPwned password requirement by setting it to `true`.
-
-**Note**: _We STRONGLY suggest picking a stronger/safer password instead of
-using this option! USE AT YOUR OWN RISK!_
-
-## Executing commands in this add-on using a Home Assistant service call
-
-This add-on uses the `hassio.addon_stdin` service to expose a shell interface
-to Home Assistant. This allows you to execute commands and scripts within
-the SSH & Web Terminal add-on, straight from Home Assistant.
-
-This is particularly helpful when you want to execute custom scripts or
-commands from automations.
-
-Example automation running `my_command`:
-
-```yaml
-automation:
-  - alias: "Example my script"
-    trigger:
-      platform: state
-      entity_id: binary_sensor.motion_sensor
-      to: "ON"
-    action:
-      service: hassio.addon_stdin
-      data:
-        addon: a0d7b954_ssh
-        input: "/config/scripts/my_command"
-```
-
 ## Known issues and limitations
 
-- The add-on fails to start when a password that is listed by HaveIBeenPwned
-  is used. This is actually not a limitation, but a security feature.
 - When SFTP is enabled, the username MUST be set to `root`.
 - If you want to use rsync for file transfer, the username MUST be set to
   `root`.
@@ -284,6 +246,17 @@ based on the following:
 - `MAJOR`: Incompatible or major changes.
 - `MINOR`: Backwards-compatible new features and enhancements.
 - `PATCH`: Backwards-compatible bugfixes and package updates.
+
+## Visual Studio Code Remote - SSH
+
+Setting the following parameters as is shown will allow you to connect to
+your Home Assistant instance using VSCode Remote - SSH:
+
+```yaml
+ssh:
+  allow_remote_port_forwarding: true
+  allow_tcp_forwarding: true
+```
 
 ## Support
 
@@ -305,13 +278,13 @@ You could also [open an issue here][issue] GitHub.
 The original setup of this repository is by [Franck Nijhof][frenck].
 
 For a full list of all authors and contributors,
-check [the contributor's page][contributors].
+check [the contributors page][contributors].
 
 ## License
 
 MIT License
 
-Copyright (c) 2017-2021 Franck Nijhof
+Copyright (c) 2017-2025 Franck Nijhof
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -331,6 +304,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+[addon-badge]: https://my.home-assistant.io/badges/supervisor_addon.svg
+[addon]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=a0d7b954_ssh&repository_url=https%3A%2F%2Fgithub.com%2Fhassio-addons%2Frepository
 [alpine-packages]: https://pkgs.alpinelinux.org/packages
 [contributors]: https://github.com/hassio-addons/addon-ssh/graphs/contributors
 [discord-ha]: https://discord.gg/c5DvZ4e
@@ -344,6 +319,7 @@ SOFTWARE.
 [openssh]: https://www.openssh.com/
 [reddit]: https://reddit.com/r/homeassistant
 [releases]: https://github.com/hassio-addons/addon-ssh/releases
-[semver]: http://semver.org/spec/v2.0.0.htm
-[ssh-audit]: https://github.com/arthepsy/ssh-audit
+[semver]: https://semver.org/spec/v2.0.0.html
+[ssh-audit-image]: https://github.com/hassio-addons/addon-ssh/raw/main/images/ssh-audit.png
+[ssh-audit]: https://github.com/jtesta/ssh-audit
 [zsh]: https://en.wikipedia.org/wiki/Z_shell

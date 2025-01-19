@@ -26,9 +26,12 @@ see the [NUT integration documentation][nut-ha-docs].
 The installation of this add-on is pretty straightforward and not different in
 comparison to installing any other Home Assistant add-on.
 
-1. Search for the "Network UPS Tools" add-on in the Home Assistant add-on store
-   and install it.
-1. Install the "Network UPS Tools" add-on.
+1. Click the Home Assistant My button below to open the add-on on your Home
+   Assistant instance.
+
+   [![Open this add-on in your Home Assistant instance.][addon-badge]][addon]
+
+1. Click the "Install" button to install the add-on.
 1. Configure the `users` and `devices` options.
 1. Start the "Network UPS Tools" add-on.
 1. Check the logs of the "Network UPS Tools" add-on to see if everything went well.
@@ -139,6 +142,16 @@ specific drivers.
 
 This is the serial port where the UPS is connected. The first serial port
 usually is `/dev/ttyS0`. Use `auto` to automatically detect the port.
+
+#### Sub-option: `powervalue`
+
+Optionally lets you set whether this particular UPS provides power to the
+device this add-on is running on. Useful if you have multiple UPS that you
+wish to monitor, but you don't want low battery on some of them to shut down
+this host. Acceptable values are `1` for "providing power to this host" or `0`
+for "monitor only". Defaults to `1`
+
+**Note**: _There must be a minimum of one attached device with powervalue `1`_
 
 #### Sub-option: `config`
 
@@ -331,7 +344,7 @@ check [the contributor's page][contributors].
 
 MIT License
 
-Copyright (c) 2018-2021 Dale Higgs
+Copyright (c) 2018-2024 Dale Higgs
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -351,6 +364,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+[addon-badge]: https://my.home-assistant.io/badges/supervisor_addon.svg
+[addon]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=a0d7b954_nut&repository_url=https%3A%2F%2Fgithub.com%2Fhassio-addons%2Frepository
 [contributors]: https://github.com/hassio-addons/addon-nut/graphs/contributors
 [critical-notif]: https://companion.home-assistant.io/docs/notifications/critical-notifications
 [dale3h]: https://github.com/dale3h
@@ -363,9 +378,9 @@ SOFTWARE.
 [nut-compatible]: https://networkupstools.org/stable-hcl.html
 [nut-conf]: https://networkupstools.org/docs/man/nut.conf.html
 [nut-features]: https://networkupstools.org/features.html
+[nut-ha-docs]: https://www.home-assistant.io/integrations/nut/
 [nut-notif-doc-1]: https://networkupstools.org/docs/user-manual.chunked/ar01s07.html
 [nut-notif-doc-2]: https://networkupstools.org/docs/man/upsmon.conf.html
-[nut-ha-docs]: https://www.home-assistant.io/integrations/nut/
 [nutupsdrv]: https://networkupstools.org/docs/man/nutupsdrv.html
 [reddit]: https://reddit.com/r/homeassistant
 [releases]: https://github.com/hassio-addons/addon-nut/releases

@@ -19,13 +19,17 @@ your Home Assistant instance as well.
 The installation of this add-on is pretty straightforward and not different in
 comparison to installing any other Home Assistant add-on.
 
-1. Ensure you have the official "MariaDB" add-on installed and running!
-1. Search for the "Traccar" add-on in the Supervisor add-on store
-   and install it.
+1. Ensure you have the [official "MariaDB" add-on][mariadb] installed and
+   running!
+1. Click the Home Assistant My button below to open the add-on on your Home
+   Assistant instance.
+
+   [![Open this add-on in your Home Assistant instance.][addon-badge]][addon]
+
+1. Click the "Install" button to install the add-on.
 1. Start the "Traccar" add-on
 1. Check the logs of the "Traccar" add-on to see if everything went well.
-1. Click the "OPEN WEB UI" button and log in using `admin`/`admin`.
-1. Be sure to change the username, email, and password!
+1. Click the "OPEN WEB UI" button.
 
 ## Configuration
 
@@ -102,7 +106,7 @@ been done to reduce the number of open ports the add-on would create.
 
 By default, only the OsmAnd protocol (used by the Traccar Apps) and the API
 are enabled. If you want more protocols, you can do so, by adding entries
-to your `/config/traccar.xml` file.
+to your `traccar.xml` file in the add-on configuration folder.
 
 A list if all entries can be found here:
 
@@ -150,7 +154,7 @@ check [the contributor's page][contributors].
 
 MIT License
 
-Copyright (c) 2018-2021 Franck Nijhof
+Copyright (c) 2018-2024 Franck Nijhof
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -170,13 +174,16 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+[addon-badge]: https://my.home-assistant.io/badges/supervisor_addon.svg
+[addon]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=a0d7b954_traccar&repository_url=https%3A%2F%2Fgithub.com%2Fhassio-addons%2Frepository
 [contributors]: https://github.com/hassio-addons/addon-traccar/graphs/contributors
 [discord-ha]: https://discord.gg/c5DvZ4e
 [discord]: https://discord.me/hassioaddons
 [forum]: https://community.home-assistant.io/t/home-assistant-community-add-on-traccar/81407?u=frenck
 [frenck]: https://github.com/frenck
 [issue]: https://github.com/hassio-addons/addon-traccar/issues
+[mariadb]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=core_mariadb
 [reddit]: https://reddit.com/r/homeassistant
 [releases]: https://github.com/hassio-addons/addon-traccar/releases
-[semver]: http://semver.org/spec/v2.0.0.htm
+[semver]: https://semver.org/spec/v2.0.0.html
 [traccar]: https://www.traccar.org

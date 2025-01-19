@@ -129,7 +129,6 @@ that there is no easy upgrade path between the two options.
 
 ## Known issues and limitations
 
-- SMTP support is disabled.
 - Ingress will not function due to the way the application stores image files.
 
 ## Changelog & Releases
@@ -171,7 +170,7 @@ check [the contributor's page][contributors].
 
 MIT License
 
-Copyright (c) 2019-2021 Paul Sinclair
+Copyright (c) 2019-2024 Paul Sinclair
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

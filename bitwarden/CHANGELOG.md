@@ -1,10 +1,5 @@
 ## What’s changed
 
-## 🐛 Bug fixes
-
-- 🚑 Start add-on as service to prevent timezone issues @frenck (#161)
-
 ## ⬆️ Dependency updates
 
-- ⬆️ Bump dessant/lock-threads from 2.1.1 to 2.1.2 @dependabot (#159)
-- ⬆️ Upgrades add-on base image to v5.0.0 @frenck (#160)
+- ⬆️ Update vaultwarden/server Docker tag to v1.32.7 @renovate ([#334](https://github.com/hassio-addons/addon-bitwarden/pull/334))
